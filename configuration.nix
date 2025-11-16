@@ -54,8 +54,9 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "us, ru";
     variant = "";
+    options = "eurosign:e, compose:menu, grp:alt_shift_toggle"; # Alt + Shift Shortcut
   };
 
   # Enable CUPS to print documents.
@@ -113,6 +114,8 @@
         clang
 	gcc
 	gnumake
+	btop
+	htop
 
     # Python
 	python3
