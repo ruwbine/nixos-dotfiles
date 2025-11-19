@@ -100,6 +100,13 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+
+  # Allow unpacked programs
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    conda
+];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -116,10 +123,12 @@
 	gnumake
 	btop
 	htop
+	gh # github-cli
 
     # Python
 	python3
 	python3Packages.pip
+	conda
 
     # Node / JS
 	nodejs_22
@@ -136,6 +145,9 @@
         obsidian
         lazygit
 	neovim
+	libreoffice
+	calibre
+	chromium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
