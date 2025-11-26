@@ -117,6 +117,7 @@
 	wget
 	git
 	curl
+	tlp # power-management-tool
 	cmake
         clang
 	gcc
@@ -139,6 +140,7 @@
    # Docker tools
 	docker-compose
 	docker
+	dive
 
     # My own apps
         telegram-desktop
